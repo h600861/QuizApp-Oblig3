@@ -46,13 +46,13 @@
 
         <TextView
             android:layout_margin="20dp"
-            android:id="@+id/correctAnswerOrNot"
+            android:id="@+id/checkAnswer"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="" />
 
         <ImageView
-            android:id="@+id/quizDogImage"
+            android:id="@+id/quizImage"
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:contentDescription="@string/imageDescription" />
@@ -66,7 +66,7 @@
             <Button
                 android:gravity="center"
                 android:layout_margin="10dp"
-                android:id="@+id/button"
+                android:id="@+id/button1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/option1" />

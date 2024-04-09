@@ -1,15 +1,12 @@
 package no.hvl.dat153.quizapp_oblig3;
 
 import android.app.Application;
-
 import androidx.lifecycle.LiveData;
-
 import java.util.List;
 
 public class ImageRepository {
 
     private ImageDAO imageDao;
-
     private LiveData<List<ImageEntity>> images;
 
     ImageRepository(Application application) {
@@ -40,4 +37,9 @@ public class ImageRepository {
         return imageDao.getAllImageAsc();
     }
 
+    public void deleteAllImages() {
+        ImageDatabase.databaseWriteExecutor.execute(() -> imageDao.deleteAll());
+    }
+
 }
+

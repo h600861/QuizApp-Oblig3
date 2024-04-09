@@ -1,9 +1,6 @@
 package no.hvl.dat153.quizapp_oblig3;
-
 import android.net.Uri;
-
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
@@ -16,9 +13,9 @@ public class ImageEntity {
 
     private String imageDescription;
 
-    private Uri imageUri;
+    private String imageUri; // Lagret som String i stedet for Uri
 
-    public ImageEntity(@NonNull String imageDescription, @NonNull Uri imageUri) {
+    public ImageEntity(@NonNull String imageDescription, @NonNull String imageUri) {
         this.imageDescription = imageDescription;
         this.imageUri = imageUri;
     }
@@ -36,8 +33,8 @@ public class ImageEntity {
         return imageDescription;
     }
 
-    @Nullable
-    public Uri getImageUri() {
+    @NonNull
+    public String getImageUri() {
         return imageUri;
     }
 
@@ -50,4 +47,5 @@ public class ImageEntity {
                 '}';
     }
 }
+
 

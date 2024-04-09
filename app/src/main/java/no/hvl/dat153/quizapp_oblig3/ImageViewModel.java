@@ -1,17 +1,13 @@
 package no.hvl.dat153.quizapp_oblig3;
 
 import android.app.Application;
-import android.media.Image;
-
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
-
 import java.util.List;
 
 public class ImageViewModel extends AndroidViewModel {
 
     private ImageRepository imageRepository;
-
     private LiveData<List<ImageEntity>> images;
 
     public ImageViewModel(Application application) {
@@ -39,5 +35,8 @@ public class ImageViewModel extends AndroidViewModel {
     public LiveData<List<ImageEntity>> getAllImagesAsc() {
         return imageRepository.getAllImageAsc();
     }
-
+    public void deleteAllImages() {
+        imageRepository.deleteAllImages();
+    }
 }
+
